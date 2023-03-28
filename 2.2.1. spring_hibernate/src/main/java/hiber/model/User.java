@@ -21,11 +21,12 @@ public class User {
 
    @OneToOne(cascade = CascadeType.ALL)
    @MapsId
+   @JoinColumn(name = "id")
    private Car car;
 
 
    public User() {}
-   
+
    public User(String firstName, String lastName, String email) {
       this.firstName = firstName;
       this.lastName = lastName;
